@@ -11,7 +11,7 @@ import A_Home from './Components/Footwear & Accessories/A_Home';
 
 
 
-import Footer from './Components/home/Footer';
+
 
 import Sidebar from './Components/salon/Sidebar';
 import Footer from './Components/home/Footer';
