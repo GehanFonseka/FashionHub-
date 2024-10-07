@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import axios from 'axios'; // Import axios for HTTP requests
+
 
 // Define styled components
 const Container = styled.div`
@@ -97,6 +99,7 @@ const C_ProductDetails = () => {
 
   useEffect(() => {
     const savedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+    console.log("savedPRoduct",savedProduct)
 
     if (savedProduct) {
       setProduct(savedProduct);
@@ -108,7 +111,7 @@ const C_ProductDetails = () => {
     setLoading(false);
   }, [navigate]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     const cartItem = {
       product,
       quantity,
@@ -116,6 +119,7 @@ const C_ProductDetails = () => {
     };
     console.log("Adding to cart:", cartItem);
     alert(`Item added to cart! Quantity: ${quantity}, Size: ${size}`);
+    await axios.post('/api/cart/cart', cartItem);
     
     navigate('/cart', { state: cartItem });
   };

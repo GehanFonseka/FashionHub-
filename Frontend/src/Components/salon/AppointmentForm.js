@@ -240,7 +240,10 @@ const AppointmentForm = () => {
           alert("Your appointment has been updated.");
         } else {
           // Creating a new appointment
-          await axios.post('/api/appointment', appointmentData);
+          const ressss = await axios.post('/api/appointment', appointmentData);
+          console.log("resssssssss",ressss.data._id);
+          
+          await axios.post('/api/cart/appointment',ressss.data);
           alert("Thank you! Your appointment has been booked.");
         }
   
