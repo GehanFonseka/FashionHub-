@@ -1,0 +1,93 @@
+/* Card container */
+.item-card {
+  background: linear-gradient(
+    to bottom,
+    #fff,
+    #f9f9f9
+  ); /* Subtle gradient background */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer; /* Add cursor pointer to indicate clickability */
+}
+
+/* Image styling */
+.item-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* Ensures consistent image size */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Product details */
+.item-card h3 {
+  font-size: 1.6rem; /* Slightly larger font size */
+  margin: 15px 0 10px 0;
+  color: #333;
+}
+
+.item-card p {
+  font-size: 1.1rem; /* Slightly larger font size */
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Price styling */
+.item-card .price {
+  font-size: 1.4rem; /* Slightly larger font size for emphasis */
+  font-weight: bold;
+  color: #e63946; /* Eye-catching red */
+  margin: 10px 0;
+}
+
+/* Button styling */
+.item-card button {
+  background-color: #E76F51; /* Orange */
+  color: white;
+  padding: 12px 24px; /* Slightly larger padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+.item-card button:hover {
+  background-color: #1d3557; /* Darker blue */
+  transform: scale(1.05); /* Slightly larger button on hover */
+}
+
+/* Hover effect for the card */
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Add animation for card loading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Styling for selected item card */
+.item-card.selected {
+  border: 2px solid #e76f51;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.2); /* Highlight shadow for selected card */
+}

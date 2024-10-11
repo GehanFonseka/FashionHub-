@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); /* Import Font Awesome for icons */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Using Poppins for a modern, rounded look */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343A40;
+  padding: 15px 30px; /* Increased padding for a more spacious look */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbar:hover {
+  background-color: #212529; /* Darker background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow for depth */
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px; /* Larger font size for prominence */
+  font-weight: 700; /* Bolder for impact */
+  transition: color 0.3s ease;
+}
+
+.nav-links {
+  font-size: 22px; /* Increased font size for better readability */
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Increased gap between links */
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Applying Poppins to links */
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ff9800;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 30px; /* Increased gap between icons */
+}
+
+.nav-icons .icon {
+  color: #fff;
+  font-size: 24px; /* Larger icons for better visibility */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-icons .icon:hover {
+  color: #ff9800;
+  transform: scale(1.3); /* Slightly enlarges the icon on hover */
+}
+
+.nav-icons .icon i {
+  display: inline-block;
+}
+
+/* Optional: Adding padding to the top of the page content to prevent it from being hidden behind the fixed navbar */
+.main-content {
+  padding-top: 80px; /* Adjust based on the height of your navbar */
+}
+
+.search-form {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-form input {
+  background-color:#fff;
+  color:#212529;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.search-form input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
+  background-color: #ff9800;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button i {
+  color: #fff;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #e68900;
+}

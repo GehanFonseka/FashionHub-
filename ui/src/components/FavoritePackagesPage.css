@@ -1,0 +1,187 @@
+/* FavoritePackagesPage.css */
+.favorite-packages-container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.favorite-packages-list {
+  display: flex;
+  flex-direction: row; /* Arrange packages in a row */
+  flex-wrap: wrap; /* Wrap to the next line if necessary */
+  gap: 20px;
+  justify-content: center; /* Center the packages horizontally */
+}
+
+.package-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  max-width: 400px; /* Limit the width of each package */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Allow cards to grow and shrink */
+  margin: 10px;
+}
+
+.package-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.package-details h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.package-budget {
+  margin-top: 5px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.package-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #e76f51;
+  color: white;
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+  
+}
+
+.delete-button:hover {
+  background-color: #d9363e;
+}
+
+.package-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.item-card {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item-images {
+  display: flex;
+  gap: 10px;
+}
+
+.item-images img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #ddd;
+  color: #333;
+  
+}
+
+.comparison-table {
+  margin-top: 20px;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th, .comparison-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.comparison-table th {
+  background-color: #f2f2f2;
+}
+
+.add-to-cart-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.add-to-cart-button:active {
+  background-color: #3e8e41; /* Even darker green when active */
+  transform: translateY(1px); /* Pressed down effect */
+}
+
+.package-actions-bottom {
+  display: flex;
+  justify-content: space-between; /* Align items on opposite sides */
+  align-items: center; /* Center items vertically */
+  margin-top: 15px; /* Space above */
+}
+
+.pdf-button-container {
+  text-align: right;
+  margin-bottom: 10px; /* Optional: To add some spacing between the button and other content */
+}
+
+.small-pdf-button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.small-pdf-button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+
+
+
+
+
